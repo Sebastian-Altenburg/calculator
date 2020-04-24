@@ -1,0 +1,29 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+
+    /* grid-column-gap: 1em; */
+    /* grid-row-gap: 1em; */ 
+    /* grid-gap: 1em; */
+
+
+    width: 50vw;
+    height: 50vw;
+    max-width: 450px;
+    max-height: 550px;
+    background-color: aqua;
+}
+.display {
+
+    grid-column: 1/4;
+}
+
+
+
+
+/* .grid > button{
+    background-color: lightslategray;
+    text-align: center;
+    
+} */
