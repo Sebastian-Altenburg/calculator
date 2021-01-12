@@ -1,5 +1,4 @@
 const dom = (() => {
-
     const parentDiv = document.querySelector(".grid");
 
     parentDiv.childNodes[3].innerHTML = "AC";
@@ -25,7 +24,6 @@ const dom = (() => {
     parentDiv.childNodes[20].innerHTML = "=";
     parentDiv.childNodes[20].classList.add("equals");
 
-
     // return {};
 })();
-export {dom};
+export default dom;

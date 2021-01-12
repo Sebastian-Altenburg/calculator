@@ -1,9 +1,10 @@
 // eslint-disable-next-line no-unused-vars
-import { buttonCreation } from "../modules/button";
+import buttonCreation from "../modules/button";
 // eslint-disable-next-line no-unused-vars
-import { dom } from "../modules/dom";
+import dom from "../modules/dom";
 import "./style.css";
 
+// This IIFE contains all major functions for the calculator to work
 const calc = (() => {
     let currentOperand = "";
     let previousOperand = "";
@@ -71,7 +72,7 @@ const calc = (() => {
     return { clear, deleteLast, appendNumber, chooseOperation, compute };
 })();
 
-/// ///////////////////////////////////////////////////////////////////////////
+/// Eventlisteners for Button below
 
 document.querySelector(".allClear").addEventListener("click", () => {
     calc.clear();

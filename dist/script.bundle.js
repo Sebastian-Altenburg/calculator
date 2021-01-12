@@ -10,28 +10,28 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "buttonCreation": () => /* binding */ buttonCreation
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 var buttonCreation = function () {
   var parentDiv = document.querySelector(".grid");
   var buttons;
 
-  for (var i = 0; i < 18; i++) {
+  for (var i = 0; i < 18; i += 1) {
     buttons = document.createElement("button");
     parentDiv.appendChild(buttons);
   }
 
-  for (var _i = 0; _i < parentDiv.children.length + 1; _i++) {
-    if (_i == 5 || _i == 9 || _i == 13 || _i == 17) {
+  for (var _i = 0; _i < parentDiv.children.length + 1; _i += 1) {
+    if (_i === 5 || _i === 9 || _i === 13 || _i === 17) {
       parentDiv.childNodes[_i].classList.add("operation");
-    } else if (_i == 6 || _i == 7 || _i == 8 || _i == 10 || _i == 11 || _i == 12 || _i == 14 || _i == 15 || _i == 16 || _i == 19) {
+    } else if (_i === 6 || _i === 7 || _i === 8 || _i === 10 || _i === 11 || _i === 12 || _i === 14 || _i === 15 || _i === 16 || _i === 19) {
       parentDiv.childNodes[_i].classList.add("numClass");
-    } else if (_i == 4) parentDiv.childNodes[_i].classList.add("delete");
+    } else if (_i === 4) parentDiv.childNodes[_i].classList.add("delete");
   } // return{};
 
 }();
 
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (buttonCreation);
 
 /***/ }),
 
@@ -43,7 +43,7 @@ var buttonCreation = function () {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dom": () => /* binding */ dom
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 var dom = function () {
   var parentDiv = document.querySelector(".grid");
@@ -69,7 +69,7 @@ var dom = function () {
   parentDiv.childNodes[20].classList.add("equals"); // return {};
 }();
 
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dom);
 
 /***/ }),
 
@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
  // eslint-disable-next-line no-unused-vars
 
 
-
+ // This IIFE contains all major functions for the calculator to work
 
 var calc = function () {
   var currentOperand = "";
@@ -148,7 +148,7 @@ var calc = function () {
     chooseOperation: chooseOperation,
     compute: compute
   };
-}(); /// ///////////////////////////////////////////////////////////////////////////
+}(); /// Eventlisteners for Button below
 
 
 document.querySelector(".allClear").addEventListener("click", function () {
@@ -193,7 +193,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    padding: 0;\n    margin: 0;\n    background: linear-gradient(180deg, pink, rgba(255, 166, 0, 0.534) );\n}\n.grid {\n    box-sizing: border-box;\n    font-family: sans-serif;\n    font-weight: normal;\n\n    display: grid;\n    justify-content: center;\n    align-content: center;\n    min-height: 100vh;\n\n    grid-template-columns: repeat(4, 100px);\n    grid-template-rows: minmax(120px, auto) repeat(5, 100px);\n    \n    /* grid-auto-rows: 1fr;  */\n}\n\n.grid > button {\n    cursor: pointer;\n    font-size: 1.5rem;\n    border: 1px solid rgba(255, 255, 255, 0.75);\n    outline: none;\n    background-color: rgba(167, 28, 209, 0.514);\n    border-radius:15px;\n    \n}\n.grid > button:hover {\n    background-color: rgba(255, 166, 0, 0.3);\n}\n\n.allClear {\n    grid-column: 1/3;\n} \n.equals {\n    grid-column: 3/5;\n} \n.output{\n    grid-column: 1/5;\n    background-color: rgba(0, 0, 0, .75);\n    display: flex;\n    align-items: flex-end;\n    justify-content: space-around;\n    flex-direction: column;\n    padding: 10px;\n    word-wrap: break-word;\n    word-break: break-all;\n}\n.output .previous{\n    font-size: 1.5rem;\n    color: rgba(255, 255, 255, .85);\n}\n.output .current{\n    font-size: 2.5rem;\n    color: rgba(255, 255, 255, 1);\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,UAAU;IACV,SAAS;IACT,oEAAoE;AACxE;AACA;IACI,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;;IAEnB,aAAa;IACb,uBAAuB;IACvB,qBAAqB;IACrB,iBAAiB;;IAEjB,uCAAuC;IACvC,wDAAwD;;IAExD,0BAA0B;AAC9B;;AAEA;IACI,eAAe;IACf,iBAAiB;IACjB,2CAA2C;IAC3C,aAAa;IACb,2CAA2C;IAC3C,kBAAkB;;AAEtB;AACA;IACI,wCAAwC;AAC5C;;AAEA;IACI,gBAAgB;AACpB;AACA;IACI,gBAAgB;AACpB;AACA;IACI,gBAAgB;IAChB,oCAAoC;IACpC,aAAa;IACb,qBAAqB;IACrB,6BAA6B;IAC7B,sBAAsB;IACtB,aAAa;IACb,qBAAqB;IACrB,qBAAqB;AACzB;AACA;IACI,iBAAiB;IACjB,+BAA+B;AACnC;AACA;IACI,iBAAiB;IACjB,6BAA6B;AACjC","sourcesContent":["body{\n    padding: 0;\n    margin: 0;\n    background: linear-gradient(180deg, pink, rgba(255, 166, 0, 0.534) );\n}\n.grid {\n    box-sizing: border-box;\n    font-family: sans-serif;\n    font-weight: normal;\n\n    display: grid;\n    justify-content: center;\n    align-content: center;\n    min-height: 100vh;\n\n    grid-template-columns: repeat(4, 100px);\n    grid-template-rows: minmax(120px, auto) repeat(5, 100px);\n    \n    /* grid-auto-rows: 1fr;  */\n}\n\n.grid > button {\n    cursor: pointer;\n    font-size: 1.5rem;\n    border: 1px solid rgba(255, 255, 255, 0.75);\n    outline: none;\n    background-color: rgba(167, 28, 209, 0.514);\n    border-radius:15px;\n    \n}\n.grid > button:hover {\n    background-color: rgba(255, 166, 0, 0.3);\n}\n\n.allClear {\n    grid-column: 1/3;\n} \n.equals {\n    grid-column: 3/5;\n} \n.output{\n    grid-column: 1/5;\n    background-color: rgba(0, 0, 0, .75);\n    display: flex;\n    align-items: flex-end;\n    justify-content: space-around;\n    flex-direction: column;\n    padding: 10px;\n    word-wrap: break-word;\n    word-break: break-all;\n}\n.output .previous{\n    font-size: 1.5rem;\n    color: rgba(255, 255, 255, .85);\n}\n.output .current{\n    font-size: 2.5rem;\n    color: rgba(255, 255, 255, 1);\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    padding: 0;\n    margin: 0;\n    background: linear-gradient(180deg, #e6cfdd 50%, #fff);\n}\n.grid {\n    box-sizing: border-box;\n    font-family: sans-serif;\n    font-weight: normal;\n\n    display: grid;\n    justify-content: center;\n    align-content: center;\n    min-height: 100vh;\n\n    grid-template-columns: repeat(4, 100px);\n    grid-template-rows: minmax(120px, auto) repeat(5, 100px);\n}\n\n.grid > button {\n    font-size: 1.8rem;\n    font-weight: 500;\n    background-color: #aacc8f;\n\n    cursor: pointer;\n    outline: none;\n\n    border: 1px solid rgba(255, 255, 255, 0.75);\n    border-radius: 15px;\n}\n.grid > button:hover {\n    background-color: #dbffbf;\n}\n\n.allClear {\n    grid-column: 1/3;\n}\n.equals {\n    grid-column: 3/5;\n}\n\n.output {\n    grid-column: 1/5;\n    display: flex;\n    align-items: flex-end;\n    justify-content: space-around;\n    flex-direction: column;\n\n    background-color: rgba(0, 0, 0, 0.75);\n    padding: 10px;\n    word-wrap: break-word;\n    word-break: break-all;\n    border-radius: 15px;\n}\n.output .previous {\n    font-size: 1.5rem;\n    color: rgba(255, 255, 255, 0.85);\n}\n.output .current {\n    font-size: 2.5rem;\n    color: rgba(255, 255, 255, 1);\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,UAAU;IACV,SAAS;IACT,sDAAsD;AAC1D;AACA;IACI,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;;IAEnB,aAAa;IACb,uBAAuB;IACvB,qBAAqB;IACrB,iBAAiB;;IAEjB,uCAAuC;IACvC,wDAAwD;AAC5D;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;IAChB,yBAAyB;;IAEzB,eAAe;IACf,aAAa;;IAEb,2CAA2C;IAC3C,mBAAmB;AACvB;AACA;IACI,yBAAyB;AAC7B;;AAEA;IACI,gBAAgB;AACpB;AACA;IACI,gBAAgB;AACpB;;AAEA;IACI,gBAAgB;IAChB,aAAa;IACb,qBAAqB;IACrB,6BAA6B;IAC7B,sBAAsB;;IAEtB,qCAAqC;IACrC,aAAa;IACb,qBAAqB;IACrB,qBAAqB;IACrB,mBAAmB;AACvB;AACA;IACI,iBAAiB;IACjB,gCAAgC;AACpC;AACA;IACI,iBAAiB;IACjB,6BAA6B;AACjC","sourcesContent":["body {\n    padding: 0;\n    margin: 0;\n    background: linear-gradient(180deg, #e6cfdd 50%, #fff);\n}\n.grid {\n    box-sizing: border-box;\n    font-family: sans-serif;\n    font-weight: normal;\n\n    display: grid;\n    justify-content: center;\n    align-content: center;\n    min-height: 100vh;\n\n    grid-template-columns: repeat(4, 100px);\n    grid-template-rows: minmax(120px, auto) repeat(5, 100px);\n}\n\n.grid > button {\n    font-size: 1.8rem;\n    font-weight: 500;\n    background-color: #aacc8f;\n\n    cursor: pointer;\n    outline: none;\n\n    border: 1px solid rgba(255, 255, 255, 0.75);\n    border-radius: 15px;\n}\n.grid > button:hover {\n    background-color: #dbffbf;\n}\n\n.allClear {\n    grid-column: 1/3;\n}\n.equals {\n    grid-column: 3/5;\n}\n\n.output {\n    grid-column: 1/5;\n    display: flex;\n    align-items: flex-end;\n    justify-content: space-around;\n    flex-direction: column;\n\n    background-color: rgba(0, 0, 0, 0.75);\n    padding: 10px;\n    word-wrap: break-word;\n    word-break: break-all;\n    border-radius: 15px;\n}\n.output .previous {\n    font-size: 1.5rem;\n    color: rgba(255, 255, 255, 0.85);\n}\n.output .current {\n    font-size: 2.5rem;\n    color: rgba(255, 255, 255, 1);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
